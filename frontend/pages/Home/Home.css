@@ -1,0 +1,56 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+  background-image: 
+    linear-gradient(to right, rgba(5, 2, 27, 0.85), rgba(44, 83, 100, 0.9)),
+    url("./homepage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f7fafc;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #cbd5e0;
+}
+
+.hero-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4fd1c5;
+  color: #1a202c;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #38b2ac;
+  color: white;
+}
