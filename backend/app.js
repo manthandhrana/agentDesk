@@ -20,6 +20,8 @@ app.use("/api", require("./routes/authRoutes"));
 app.use("/api", require("./routes/agentRoutes"));
 
 // Swagger docs
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+if (process.env.NODE_ENV !== "production") {
+  app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+}
 
 module.exports = app;
