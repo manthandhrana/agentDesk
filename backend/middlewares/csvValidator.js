@@ -2,9 +2,14 @@ const multer = require('multer');
 const path = require('path');
 
 const storage = multer.diskStorage({
-  destination: '/tmp/uploads',
-  filename: (req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`)
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/uploads'); // /tmp is writeable in Lambda
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
 });
+
 
 const fileFilter = (req, file, cb) => {
   const ext = path.extname(file.originalname);
